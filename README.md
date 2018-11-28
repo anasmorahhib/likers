@@ -1,4 +1,4 @@
-![likers logo](http://www.morahhib.com/img/likers-logo.jpg)
+![likers logo](http://www.morahhib.com/img/likers-logo.jpg)  
 # Likers (Social Media Marketing (SMM) - Reseller Panel)
 *This script is in Arabic, and for now there is only the RTL version.*  
 This is an open source reseller Panel for Social Media Marketing. to see the content of this script watch this [video](https://www.youtube.com/watch?v=ZAOk2-0pDRs&index=3&list=PLQJjtF_jDk3vImSt72cwwh5uV0o7vyx2m).  
@@ -10,10 +10,14 @@ Twitter bootstrap 2.3
 Paypal API  
 Instagram API  
 ### The necessary modifications before host the code:
+* Run `composer install`
+[About composer](https://getcomposer.org/doc/00-intro.md)
 * Import the database `db-likers.sql`. 
 * Configure your database file:  
 `app\Config\database.php` 
 ```php
+<?php
+class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
@@ -24,6 +28,7 @@ Instagram API
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
+}
 ```
 * Configure the mail client settings:
 you can use your webmail as you can use GMAIL.  
